@@ -25,6 +25,11 @@ class CustomService : Service() {
         isStop = true
     }
 
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        //intent.getExtra
+        return super.onStartCommand(intent, flags, startId)
+    }
+
     inner class CustomThread : Thread() {
         override fun run() {
             while (!isStop) {

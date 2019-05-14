@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val switch = findViewById<Switch>(R.id.sc_switch)
-        val intent = Intent(applicationContext, CustomService::class.java)
+        val intent = Intent(this, CustomService::class.java)
         switch.setOnCheckedChangeListener {
                 buttonView, isChecked ->
             if(isChecked) {
